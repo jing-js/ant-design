@@ -2,7 +2,6 @@
 
 - category: Components
 - chinese: 加载中
-- type: 展示
 
 ---
 
@@ -16,6 +15,7 @@
 ## API
 
 
-| 参数       | 类型           | 默认值      | 说明        |
+| 参数       | 类型           | 默认值      | 说明         |
 |------------|----------------|-------------|--------------|
-| size       | enum           | default     | spin组件中点的大小，可选值为 small default large
+| size       | enum           | default     | spin组件中点的大小，可选值为 small default large |
+| spining    | boolean        | true        | 用于内嵌其他组件的模式，可以关闭 loading 效果    |

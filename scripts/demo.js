@@ -9,6 +9,22 @@ var semver = require('semver');
 window.antd = antd;
 window.React = React;
 window.ReactDOM = ReactDOM;
+window['object-assign'] = require('object-assign');
+
+antd.Datepicker.locale = {
+  en_US: require('../components/datepicker/locale/en_US'),
+  zh_CN: require('../components/datepicker/locale/zh_CN'),
+};
+
+antd.Calendar.locale = {
+  en_US: require('../components/calendar/locale/en_US'),
+  zh_CN: require('../components/calendar/locale/zh_CN'),
+};
+
+antd.Pagination.locale = {
+  en_US: require('../components/pagination/locale/en_US'),
+  zh_CN: require('../components/pagination/locale/zh_CN'),
+};
 
 InstantClickChangeFns.push(function () {
   // auto complete for components
@@ -79,6 +95,26 @@ InstantClickChangeFns.push(function () {
     <Select defaultValue={antdVersion.latest} size="small" style={{width:130}}
             onChange={onChange}>{options}</Select>
   , document.getElementById('versions-select'));
+});
+
+window.BrowserDemo = React.createClass({
+  render() {
+    return (
+      <article className="window-frame focus">
+        <header className="top-bar">
+          <div className="controls">
+            <div className="control close"></div>
+            <div className="control minify"></div>
+            <div className="control expand"></div>
+          </div>
+          <input className="address-bar" defaultValue="http://www.example.com" />
+        </header>
+        <section className="window-content">
+          {this.props.children}
+        </section>
+      </article>
+    );
+  }
 });
 
 module.exports = antd;

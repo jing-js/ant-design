@@ -35,9 +35,21 @@
 
 ## 示例
 
+
 ```jsx
 import { Datepicker } from 'antd';
 ReactDOM.render(<Datepicker />, mountNode);
+```
+
+或者按需加载：
+
+```jsx
+import Datepicker from 'antd/lib/datepicker';
+ReactDOM.render(<Datepicker />, mountNode);
+```
+
+```jsx
+import 'antd/lib/index.css'; // 样式需要在入口处引用一次
 ```
 
 ## 版本
